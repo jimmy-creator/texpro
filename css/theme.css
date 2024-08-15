@@ -537,13 +537,14 @@ progress {
   .container, .container-sm {
     max-width: 540px; } }
 
-@media (max-width: 768px) {
-  h1 {
-      font-size: 2em;
+    @media (max-width: 768px) {
+      h1 {
+          font-size: 2em;
+      }
+      p {
+          font-size: 1em;
+      }
   }
-  p {
-      font-size: 1em;
-  }}
 
 @media (min-width: 768px) {
   .container, .container-sm, .container-md {
