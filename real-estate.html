@@ -1,0 +1,83 @@
+<!doctype html>
+<html class="h-100" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>AI Real Estate Agent</title>
+  <link rel="stylesheet" href="css/theme.min.css">
+  <link rel="stylesheet" href="css/realestate.css">
+  <style>
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: local(''), url('fonts/inter-v12-latin-regular.woff2') format('woff2'), url('fonts/inter-v12-latin-regular.woff') format('woff');
+    }
+  </style>
+</head>
+<body class="d-flex flex-column h-100">
+  <nav class="navbar navbar-dark bg-black px-vw-5">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/texpro-logo.png" alt="Logo" style="height:40px">
+      </a>
+      <ul class="navbar-nav flex-row">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="project.html">Projects</a></li>
+      </ul>
+    </div>
+  </nav>
+  <main class="flex-shrink-0">
+    <div class="container text-center py-5">
+      <h1 class="display-4">AI Real Estate Agent</h1>
+      <p class="lead section-title">Smart property search and insights</p>
+    </div>
+
+    <div class="container my-4">
+      <div class="card p-4">
+        <h2 class="h4 mb-3">Property Search</h2>
+        <form id="searchForm">
+          <div class="row g-3">
+            <div class="col-md-3"><input type="text" id="location" class="form-control" placeholder="Location"></div>
+            <div class="col-md-3"><input type="number" id="minPrice" class="form-control" placeholder="Min Price"></div>
+            <div class="col-md-3"><input type="number" id="maxPrice" class="form-control" placeholder="Max Price"></div>
+            <div class="col-md-3">
+              <select id="type" class="form-select">
+                <option value="">Any Type</option>
+                <option value="House">House</option>
+                <option value="Apartment">Apartment</option>
+                <option value="Condo">Condo</option>
+              </select>
+            </div>
+          </div>
+          <div class="mt-3 text-end">
+            <button class="btn btn-primary" type="submit">Search</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="container my-4">
+      <h2 class="h4 section-title">Recommended Properties</h2>
+      <div id="results" class="row g-3"></div>
+    </div>
+
+    <div class="container my-5">
+      <h2 class="h4 section-title">Market Trends</h2>
+      <canvas id="trendChart" height="200" style="width:100%"></canvas>
+    </div>
+
+    <div class="container my-5">
+      <h2 class="h4 section-title">AI Chatbot</h2>
+      <div id="chatbox" class="card p-3 mb-3" style="max-height:300px;overflow-y:auto"></div>
+      <form id="chatForm" class="input-group">
+        <input id="chatInput" class="form-control" placeholder="Ask a question..." autocomplete="off">
+        <button class="btn btn-primary" type="submit">Send</button>
+      </form>
+    </div>
+  </main>
+
+  <script src="js/realestate.js"></script>
+</body>
+</html>
